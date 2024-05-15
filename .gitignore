@@ -1,4 +1,10 @@
 # Ignorar la carpeta de Libros
 /Libros/*.pdf
+
+# Semana 3
 /1B_Aplicació_Web/Semana_3-AWeb/Activities_S3/*.pdf
 /1B_Aplicació_Web/Semana_4-AWeb/Autonomous_work/video/Tom_y_Jerry_(2021).mp4
+
+# Semana 4
+/1B_Aplicació_Web/Semana_3-AWeb/Activities_S4/*.pdf
+/1B_Aplicació_Web/Semana_3-AWeb/Activities_S4/*.docx
