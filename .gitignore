@@ -1,2 +1,2 @@
 # Ignorar la carpeta de Libros
-/Libros
+/Libros/*.pdf
