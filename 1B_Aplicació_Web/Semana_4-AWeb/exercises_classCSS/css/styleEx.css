@@ -5,7 +5,7 @@
 }
 
 #general{
-    width: 890px;
+    width: 1250px;
     margin: 0px auto;
     margin-top: 20px;
     border: 1px solid gray;
@@ -13,7 +13,7 @@
 
 #header{
     width: 100%;
-    height: 120px;
+    height: 80px;
     background: rgb(28, 126, 245);
     color: white;
     text-align: center;
@@ -39,10 +39,11 @@
     display: block;
     padding: 25px;
     color: white;
-    text-decoration: none;
+    /*--text-decoration: none;*/
 }
 
 #menu ul li:hover{
+    /* hover es para que cambie el color cuando se mantiene el mouse encima de la caja de texto*/
     background: rgb(16, 75, 143);
     cursor: pointer;
 }
@@ -50,10 +51,11 @@
 #menu ul li:hover a{
     color: greenyellow;
     font-size: 20px;
+    text-decoration: none;
 }
 
 #contenido{
-    width: 70%;
+    width: 69%;
     float: left;
     border: 1px solid blue;
 }
@@ -64,7 +66,8 @@
     float: left;
     min-height: 300px;
     max-height: 400px;
-    overflow-y: scroll;
+    /*Con esto aparece una barra de navegación vertial*/
+    overflow-y: scroll; 
 }
 
 #contenido h1{
@@ -72,7 +75,7 @@
     border-bottom: 1px solid gray;
     padding: 15px;
     color: coral;
-    text-shadow: 5px 5px 8px green;
+    text-shadow: 1px 1px 2px green;
 }
 
 #contenido .caja{
@@ -88,13 +91,14 @@
     text-transform: uppercase;
     box-shadow: 5px 5px 10px red;
     border-radius: 5px 10px 4px 60px;
+    float: left;
 }
 
 .sombra-interior{
     box-shadow: 0px 0px 20px inset !important;
 }
 
-footter{
+footer{
     width: 100%;
     height: 55px;
     line-height: 55px;
@@ -110,16 +114,16 @@ footter{
     background-color: red;
     color: white;
     width: 50px;
-    height: 50px;
-    font: 15px;
+    /*height: 50px;*/
+    font-size: 15px;
 }
 
 .libre1{
-    z-index: 102;
+    z-index: 101;
 }
 
 .libre2{
-    z-index: 101;
+    z-index: 102;
     background-color: green;
     top: 280px;
 }
