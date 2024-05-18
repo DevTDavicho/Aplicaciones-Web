@@ -89,3 +89,44 @@
     box-shadow: 5px 5px 10px red;
     border-radius: 5px 10px 4px 60px;
 }
+
+.sombra-interior{
+    box-shadow: 0px 0px 20px inset !important;
+}
+
+footter{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    background-color: #ccc;
+    border: 1px solid gray;
+    font-size: 15px;
+}
+
+.libre{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    background-color: red;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font: 15px;
+}
+
+.libre1{
+    z-index: 102;
+}
+
+.libre2{
+    z-index: 101;
+    background-color: green;
+    top: 280px;
+}
+
+.fija{
+    position: fixed;
+    top: 50%;
+    border: 1px solid black;
+    background-color: blue;
+}
