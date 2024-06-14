@@ -1,3 +1,6 @@
+# Ignorar los carpetas
+/.vscode
+
 # Ignorar la carpeta de Libros
 /Libros/*.pdf
 
