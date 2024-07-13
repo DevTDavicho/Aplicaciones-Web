@@ -29,7 +29,7 @@ var controller = {
             auto.color = params.color;
             auto.anio = params.anio;
             auto.precio = params.precio;
-            auto.imagen = null;
+            auto.imagen = params.imagen;
 
             var autoStored = await auto.save();
             if(!autoStored){
@@ -54,13 +54,16 @@ var controller = {
         }
     },
     deleteAuto: async function(req, res){
-        try{
+        try {
             var autoId = req.params.id;
-            var autoRemove = await Auto.findByIdAndDelete(autoId);
-            if(!autoRemove) return res.status(404).send({message: 'El auto no se puede eliminar'});
-            return res.status(200).send({auto: autoRemoved});
-        }catch(error){
-            return res.status(500).send({message: 'Error al eliminar los datos'});
+            var auto = await Auto.findById(autoId);
+            if (!auto) return res.status(404).send({ message: 'El auto no existe y no se puede eliminar' });
+
+            var autoRemoved = await Auto.findByIdAndDelete(autoId);
+            if (!autoRemoved) return res.status(404).send({ message: 'El auto no se puede eliminar' });
+            return res.status(200).send({ message: 'Auto eliminado correctamente', auto: autoRemoved });
+        } catch (error) {
+            return res.status(500).send({ message: 'Error al eliminar los datos' });
         }
     },
     updateAuto:async function(req,res){
