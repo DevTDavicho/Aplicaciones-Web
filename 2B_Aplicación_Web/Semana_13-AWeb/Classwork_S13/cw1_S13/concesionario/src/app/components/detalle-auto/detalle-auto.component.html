@@ -1,1 +1,22 @@
-<p>detalle-auto works!</p>
+<h2>DETALLE AUTO</h2>
+<div class="container" *ngIf="auto.imagen">
+    <div class="imagen" *ngIf="auto.imagen">
+        <img src="{{url+'get-imagen/'+auto.imagen}}" *ngIf="auto.imagen">
+    </div>
+</div>
+<div class="data">
+    <h3>{{auto.marca}}</h3>
+    <h3>{{auto.modelo}}</h3>
+    <h3>{{auto.color}}</h3>
+    <h3>{{auto.anio}}</h3>
+    <h3>{{auto.precio}}</h3>
+    <p *ngIf="confirm==false">
+        <a [routerLink]="['/editar-auto',auto._id]" class="button-edit">Editar</a>
+        <a (click)="setConfirm(true)" class="button-delete">Borrar</a>
+    </p>
+    <p *ngIf="confirm==true">
+        <span class="confirm">Estas segeuro de eliminar el auto?</span>
+        <a (click)="setConfirm(false)" class="button-edit">Cancelar</a>
+        <a (click)="borrarAuto(auto._id)" class="button-delete">Eliminar definitivamente</a>
+    </p>
+</div>

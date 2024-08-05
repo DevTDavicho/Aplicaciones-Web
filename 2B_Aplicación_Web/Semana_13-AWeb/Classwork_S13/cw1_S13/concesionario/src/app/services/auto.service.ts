@@ -43,6 +43,7 @@ export class AutoService {
     let headers = new HttpHeaders().set('Content-Type','application/json');
     return this._http.get(this.url + 'auto/' + id, {headers:headers});
   }
+  
   //eliminar un auto
   //http://localhost:3600/auto/:id
   deleteAuto(id: String):Observable<any>{
